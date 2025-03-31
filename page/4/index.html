@@ -1,0 +1,237 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>马翔的博客</title><meta name="author" content="马翔"><meta name="copyright" content="马翔"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="命运和性格是同一个概念的两个名字。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="马翔的博客">
+<meta property="og:url" content="https://maxmaxiang.github.io/page/4/index.html">
+<meta property="og:site_name" content="马翔的博客">
+<meta property="og:description" content="命运和性格是同一个概念的两个名字。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://maxmaxiang.github.io/img/butterfly-icon.png">
+<meta property="article:author" content="马翔">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://maxmaxiang.github.io/img/butterfly-icon.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://maxmaxiang.github.io/page/4/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '马翔的博客',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="马翔的博客" type="application/atom+xml">
+</head><body><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">马翔的博客</span></a></span><div id="menus"></div></nav><div id="site-info"><h1 id="site-title">马翔的博客</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/03/11/%E6%9D%82%E8%B0%88/%E5%BA%B7%E5%BE%B7%EF%BC%9A%E5%A6%82%E4%BD%95%E7%AE%A1%E7%90%86%E4%BD%A0%E7%9A%84%E6%97%B6%E9%97%B4%EF%BC%9F/" title="康德：如何管理你的时间？">康德：如何管理你的时间？</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-03-11T12:56:21.000Z" title="发表于 2024-03-11 20:56:21">2024-03-11</time></span></div><div class="content">1、组织你的生活“science is organized knowledge，and wisdom is organized life ”康德认为缺乏规律和结构的生活方式会消耗我们的身体、精神和情绪，所以我们需要组织自己的生活。开始组织生活的最好方式就是思考你的长期目标是什么，以及需要通过哪些日常事例来实现这些目标。好的时间管理能够帮助我们专注于重要的事以及高效的实现目标。那么你的目标是什么呢？你是如何安排自己的日常事例的？“如果你不主动安排自己的日程，只是被动的接受安排那你就是在无休止帮助别人实现他的长期目标” 2、贯彻执行你的计划“man must be disciplined for he is by nature raw and wild”你需要从最难最重要的事开始做起，建立正向反馈每完成一个任务记得奖励你的大象（nature） 3、在日常生活中遵循普遍性原则想要放纵自己的时候问问自己这是必要的吗？我的行为准则是什么？如果每个人都遵循这样的原则（世界/社会/公司……）会怎么样？ 4、安排时间来发展你的技能“we are not rich by what we...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/02/09/%E8%AF%BB%E5%90%8E%E6%84%9F/%E5%8D%A1%E5%A4%AB%E5%8D%A1-%E8%A1%A3%E6%9C%8D/" title="卡夫卡-衣服">卡夫卡-衣服</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-02-08T17:01:17.000Z" title="发表于 2024-02-09 01:01:17">2024-02-09</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%AF%BB%E5%90%8E%E6%84%9F/">读后感</a></span></div><div class="content">...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/02/03/hexo%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/hexo%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" title="hexo使用教程">hexo使用教程</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-02-03T15:19:01.000Z" title="发表于 2024-02-03 23:19:01">2024-02-03</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</a></span></div><div class="content">1.Hexo 最常用的几个命令 Hexo 最常用的几个命令 - 简书 (jianshu.com) 2.Hexo搭建Butterfly主题并快速美化 【Hexo】Hexo搭建Butterfly主题并快速美化_hexo主题butterfly配置-CSDN博客 3.聚合图床 聚合图床 - 免费无限图片上传 (superbed.cn) 可能的报错：  OpenSSL SSL_connect: Connection was reset in connection to github.com:443 这个问题是vpn代理和git的代理不一致导致的，需要使用如下命令,端口号从vpn软件中查看 1234git config --global --unset http.proxygit config --global --unset https.proxygit config --global http.proxy 127.0.0.1:19180git config --global https.proxy 127.0.0.1:19181 2 stream 1 was not closed...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/01/13/%E8%AF%BB%E5%90%8E%E6%84%9F/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%8E%E4%BA%BA%E8%84%91_%E5%86%B2%E7%AA%81%E6%96%87%E4%BB%B6_Mx_20250331134250/" title="计算机与人脑">计算机与人脑</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-01-13T03:01:17.000Z" title="发表于 2024-01-13 11:01:17">2024-01-13</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%AF%BB%E5%90%8E%E6%84%9F/">读后感</a></span></div><div class="content">1.人脑+神经系统是机械反应，化学反应，电脉冲的混合系统。其中用于存储和反应的神经系统有如下特点： 每一个神经元的当前状态是它过去状态+当前接收到的反应所构成的，即一个选择倾向是通过加强或削弱 当时冯诺依曼那个时代对于人脑的认识非常的浅，还没有目前的科普视频了解的深，所以当时主要是关于信号传递和信息量的讨论，对于大脑本身的讨论不多，因为当时并不清楚大脑内部的具体的结构。 </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/09/30/%E5%93%B2%E5%AD%A6/%E4%BD%A0%E7%9A%84%E7%AC%AC%E4%B8%80%E6%9C%AC%E5%93%B2%E5%AD%A6%E4%B9%A6-%E8%87%AA%E7%94%B1%E6%84%8F%E5%BF%97/" title="你的第一本哲学书-自由意志">你的第一本哲学书-自由意志</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-09-29T17:01:17.000Z" title="发表于 2023-09-30 01:01:17">2023-09-30</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%93%B2%E5%AD%A6/">哲学</a></span></div><div class="content">自由意志到底是否存在？如果采纳决定论，我们就不能责备干坏事的人和夸奖做好事的人；如果不采纳决定论，问题出现了，如果说你的行为并未被你的欲望，信念和人格及其他东西所事先决定，它看起来就是某件自己发生的事情，没法给出什么解释。在这种情况下，你如何能够做它？ 最终，无论我们的行为是不是被决定的，我们都不必为此负责。 </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/06/03/%E5%93%B2%E5%AD%A6/%E3%80%8A%E7%AC%9B%E5%8D%A1%E5%B0%94%E3%80%8B5-7%E7%AB%A0/" title="《笛卡尔》5-7章杂谈">《笛卡尔》5-7章杂谈</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-06-03T15:45:17.000Z" title="发表于 2023-06-03 23:45:17">2023-06-03</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%93%B2%E5%AD%A6/">哲学</a></span></div><div class="content">...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/04/30/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0_%E5%86%B2%E7%AA%81%E6%96%87%E4%BB%B6_Mx_20250331134250/" title="高等代数">高等代数</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-04-30T04:23:58.000Z" title="发表于 2023-04-30 12:23:58">2023-04-30</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></span></div><div class="content">高等代数研究对象高等代数是用来解方程的，最开始我们学习的是一元一次方程，然后自然的延伸到一元高次方程，这也就是经典代数学研究的对象，就是用一个未知量到高次数的一个方向发展。 另一个方向便是多元一次方程。n元一次方程组的求解过程可以简化为对一个矩阵进行初等行变换的过程。 对于一个三元一次方程组  \begin{cases} x_{1} + 3x_{2} + x_{3}=2 \\ 3x_{1} + 4x_{2} + 2x_{3}=9 \\ -x_{1} - 5x_{2} + 4x_{3}=10 \\ 2x_{1} + 7x_{2} + x_{3}=1 \end{cases}如果我们固定它的未知量的位置，实际上我们只在对未知量的系数和常数项进行运算，我们便可简写为矩阵的形式：s×n个数排成的s行n列的一张表就叫做一个s×n矩阵。  \begin{pmatrix}     1 & 3 & 1 & 2\\     3 & 4 & 2 & 9\\     -1 & -5 & 4 & 10 \\   2 & 7 & 1  &...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/04/30/%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/" title="高等代数">高等代数</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-04-30T04:23:58.000Z" title="发表于 2023-04-30 12:23:58">2023-04-30</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a></span></div><div class="content">高等代数研究对象高等代数是用来解方程的，最开始我们学习的是一元一次方程，然后自然的延伸到一元高次方程，这也就是经典代数学研究的对象，就是用一个未知量到高次数的一个方向发展。 另一个方向便是多元一次方程。n元一次方程组的求解过程可以简化为对一个矩阵进行初等行变换的过程。 对于一个三元一次方程组  \begin{cases} x_{1} + 3x_{2} + x_{3}=2 \\ 3x_{1} + 4x_{2} + 2x_{3}=9 \\ -x_{1} - 5x_{2} + 4x_{3}=10 \\ 2x_{1} + 7x_{2} + x_{3}=1 \end{cases}如果我们固定它的未知量的位置，实际上我们只在对未知量的系数和常数项进行运算，我们便可简写为矩阵的形式：s×n个数排成的s行n列的一张表就叫做一个s×n矩阵。  \begin{pmatrix}     1 & 3 & 1 & 2\\     3 & 4 & 2 & 9\\     -1 & -5 & 4 & 10 \\   2 & 7 & 1  &...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/04/30/%E8%AE%A1%E7%AE%97%E6%9C%BA/Prometheus%E7%9B%91%E6%8E%A7kafka%E5%92%8Credis%E9%85%8D%E7%BD%AE%E6%96%87%E6%A1%A3/" title="Prometheus监控kafka和redis配置文档">Prometheus监控kafka和redis配置文档</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-04-30T04:23:58.000Z" title="发表于 2023-04-30 12:23:58">2023-04-30</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</a></span></div><div class="content">Prometheus监控kafka和redis配置文档1.上传镜像上传kafka_exporter.tar,redis_exporter.tar  123456789101112131415161718cd /tmp/promlsdocker load &lt; kafka_exporter.tardocker load &lt; redis_exporter.tar docker tag danielqsj/kafka-exporter:latest 172.31.10.118/monitor/kafka-exporter:v1.0docker tag prom/grafana 172.31.70.135:8443/prom/grafana:v1.0docker push 172.31.70.135:8443/prom/grafana:v1.0docker tag prom/node-exporter:v0.15.2  172.31.70.135:8443/prom/node-exporter:v0.15.2docker push...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/04/30/%E8%AE%A1%E7%AE%97%E6%9C%BA/centos7%E5%9C%A8%E7%BA%BFdatahub%E6%90%AD%E5%BB%BA/" title="在线datahub搭建">在线datahub搭建</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-04-30T04:23:58.000Z" title="发表于 2023-04-30 12:23:58">2023-04-30</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</a></span></div><div class="content">centos7在线datahub搭建1.安装vmware2.安装centos7设置虚拟机为8g内存，2核处理器，80g硬盘 3.环境准备关闭并禁用防火墙123456su rootsystemctl stop firewalldsystemctl disable firewalld#关闭selinux鉴权vim  /etc/selinux/configSELINUX=disable 然后xshell连接虚拟机，方便操作 挂载共享文件夹在vmware里挂载对应目录 然后在虚拟机内 123cd /mnt/hgfsyum install open-vm-toolsvmhgfs-fuse .host:/ /mnt/hgfs yum换源12345678910111213141516#安装wgetyum install wget -y#备份原来的源sudo mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.bk#下载阿里源cd /etc/yum.repos.dsudo wget -nc...</div></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/3/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/#content-inner">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/#content-inner">5</a><a class="page-number" href="/page/6/#content-inner">6</a><a class="extend next" rel="next" href="/page/5/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">马翔</div><div class="author-info-description">命运和性格是同一个概念的两个名字。</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">54</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2099/02/03/%E5%90%8D%E4%BA%BA%E5%90%8D%E8%A8%80/%E5%90%8D%E4%BA%BA%E5%90%8D%E8%A8%80/" title="名人名言">名人名言</a><time datetime="2099-02-03T14:44:24.000Z" title="发表于 2099-02-03 22:44:24">2099-02-03</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/03/31/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2%E9%98%BF%E9%87%8C%E7%9A%84%E4%B8%87%E8%B1%A12.1%E6%96%87%E7%94%9F%E8%A7%86%E9%A2%91%EF%BC%88Wan2.1-T2V-1.3B%EF%BC%89%E6%A8%A1%E5%9E%8B(1)/" title="无标题">无标题</a><time datetime="2025-03-31T05:42:50.466Z" title="发表于 2025-03-31 13:42:50">2025-03-31</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/03/31/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2deepseek/" title="无标题">无标题</a><time datetime="2025-03-31T05:42:50.452Z" title="发表于 2025-03-31 13:42:50">2025-03-31</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/03/31/%E6%B8%B8%E6%88%8F/%E6%96%87%E6%98%8E6/%E6%96%B0%E5%BB%BA%20Markdown/" title="无标题">无标题</a><time datetime="2025-03-31T05:42:50.406Z" title="发表于 2025-03-31 13:42:50">2025-03-31</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/01/14/%E8%AF%BB%E5%90%8E%E6%84%9F/%E5%86%B3%E7%AD%96%E7%9A%84%E8%89%BA%E6%9C%AF/" title="决策的艺术">决策的艺术</a><time datetime="2025-01-14T15:01:17.000Z" title="发表于 2025-01-14 23:01:17">2025-01-14</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%90%8D%E4%BA%BA%E5%90%8D%E8%A8%80/"><span class="card-category-list-name">名人名言</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%93%B2%E5%AD%A6/"><span class="card-category-list-name">哲学</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%95%B0%E5%AD%A6/"><span class="card-category-list-name">数学</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%B8%B8%E6%88%8F/"><span class="card-category-list-name">游戏</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/"><span class="card-category-list-name">计算机</span><span class="card-category-list-count">16</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E8%AF%BB%E5%90%8E%E6%84%9F/"><span class="card-category-list-name">读后感</span><span class="card-category-list-count">23</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E5%90%8D%E4%BA%BA%E5%90%8D%E8%A8%80/" style="font-size: 1.1em; color: #999">名人名言</a> <a href="/tags/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/" style="font-size: 1.3em; color: #99a1ac">高等代数</a> <a href="/tags/%E7%AC%9B%E5%8D%A1%E5%B0%94/" style="font-size: 1.1em; color: #999">笛卡尔</a> <a href="/tags/%E6%96%87%E6%98%8E6/" style="font-size: 1.5em; color: #99a9bf">文明6</a> <a href="/tags/hexo%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" style="font-size: 1.1em; color: #999">hexo使用教程</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      <a class="card-more-btn" href="/archives/"
+            title="查看更多">
+            <i class="fas fa-angle-right"></i>
+          </a>
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2099/02/">
+            <span class="card-archive-list-date">
+              二月 2099
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/03/">
+            <span class="card-archive-list-date">
+              三月 2025
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/01/">
+            <span class="card-archive-list-date">
+              一月 2025
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/11/">
+            <span class="card-archive-list-date">
+              十一月 2024
+            </span>
+            <span class="card-archive-list-count">4</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/10/">
+            <span class="card-archive-list-date">
+              十月 2024
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/09/">
+            <span class="card-archive-list-date">
+              九月 2024
+            </span>
+            <span class="card-archive-list-count">18</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/08/">
+            <span class="card-archive-list-date">
+              八月 2024
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/04/">
+            <span class="card-archive-list-date">
+              四月 2024
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">54</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-03-31T07:34:57.300Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;2025 By 马翔</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.4.0-b1</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>马翔的博客 | 马翔的博客</title><meta name="author" content="马翔"><meta name="copyright" content="马翔"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="本地部署阿里的万象2.1文生视频（Wan2.1-T2V-1.3B）模型本地环境i5-13490 32g内存 4060 8g显存 官网地址：Wan-AI&#x2F;Wan2.1-T2V-1.3B · HF Mirror (hf-mirror.com) 参考文档：本地部署阿里的万象2.1文生视频（Wan2.1-T2V-1.3B）模型-CSDN博客 换源pip换阿里源 123pip config set glob">
+<meta property="og:type" content="article">
+<meta property="og:title" content="马翔的博客">
+<meta property="og:url" content="https://maxmaxiang.github.io/2025/03/31/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2%E9%98%BF%E9%87%8C%E7%9A%84%E4%B8%87%E8%B1%A12.1%E6%96%87%E7%94%9F%E8%A7%86%E9%A2%91%EF%BC%88Wan2.1-T2V-1.3B%EF%BC%89%E6%A8%A1%E5%9E%8B(1)/index.html">
+<meta property="og:site_name" content="马翔的博客">
+<meta property="og:description" content="本地部署阿里的万象2.1文生视频（Wan2.1-T2V-1.3B）模型本地环境i5-13490 32g内存 4060 8g显存 官网地址：Wan-AI&#x2F;Wan2.1-T2V-1.3B · HF Mirror (hf-mirror.com) 参考文档：本地部署阿里的万象2.1文生视频（Wan2.1-T2V-1.3B）模型-CSDN博客 换源pip换阿里源 123pip config set glob">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://maxmaxiang.github.io/img/butterfly-icon.png">
+<meta property="article:published_time" content="2025-03-31T05:42:50.466Z">
+<meta property="article:modified_time" content="2025-03-25T03:59:17.000Z">
+<meta property="article:author" content="马翔">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://maxmaxiang.github.io/img/butterfly-icon.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "",
+  "url": "https://maxmaxiang.github.io/2025/03/31/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2%E9%98%BF%E9%87%8C%E7%9A%84%E4%B8%87%E8%B1%A12.1%E6%96%87%E7%94%9F%E8%A7%86%E9%A2%91%EF%BC%88Wan2.1-T2V-1.3B%EF%BC%89%E6%A8%A1%E5%9E%8B(1)/",
+  "image": "https://maxmaxiang.github.io/img/butterfly-icon.png",
+  "datePublished": "2025-03-31T05:42:50.466Z",
+  "dateModified": "2025-03-25T03:59:17.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "马翔",
+      "url": "https://maxmaxiang.github.io/"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://maxmaxiang.github.io/2025/03/31/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2%E9%98%BF%E9%87%8C%E7%9A%84%E4%B8%87%E8%B1%A12.1%E6%96%87%E7%94%9F%E8%A7%86%E9%A2%91%EF%BC%88Wan2.1-T2V-1.3B%EF%BC%89%E6%A8%A1%E5%9E%8B(1)/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '马翔的博客',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="马翔的博客" type="application/atom+xml">
+</head><body><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">马翔的博客</span></a><a class="nav-page-title" href="/"><span class="site-name">马翔的博客</span></a></span><div id="menus"></div></nav><div id="post-info"><h1 class="post-title">无标题</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-03-31T05:42:50.466Z" title="发表于 2025-03-31 13:42:50">2025-03-31</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-03-25T03:59:17.000Z" title="更新于 2025-03-25 11:59:17">2025-03-25</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1 id="本地部署阿里的万象2-1文生视频（Wan2-1-T2V-1-3B）模型"><a href="#本地部署阿里的万象2-1文生视频（Wan2-1-T2V-1-3B）模型" class="headerlink" title="本地部署阿里的万象2.1文生视频（Wan2.1-T2V-1.3B）模型"></a>本地部署阿里的万象2.1文生视频（Wan2.1-T2V-1.3B）模型</h1><p>本地环境i5-13490 32g内存 4060 8g显存</p>
+<p>官网地址：<a target="_blank" rel="noopener" href="https://hf-mirror.com/Wan-AI/Wan2.1-T2V-1.3B">Wan-AI/Wan2.1-T2V-1.3B · HF Mirror (hf-mirror.com)</a></p>
+<p>参考文档：<a target="_blank" rel="noopener" href="https://blog.csdn.net/ddrfan/article/details/145887466">本地部署阿里的万象2.1文生视频（Wan2.1-T2V-1.3B）模型-CSDN博客</a></p>
+<h2 id="换源"><a href="#换源" class="headerlink" title="换源"></a>换源</h2><p>pip换阿里源</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pip config <span class="built_in">set</span> global.index-url https://mirrors.aliyun.com/pypi/simple/</span><br><span class="line">pip config <span class="built_in">set</span> global.trusted-host mirrors.aliyun.com</span><br><span class="line">pip config list</span><br></pre></td></tr></table></figure>
+<h2 id="安装cuda"><a href="#安装cuda" class="headerlink" title="安装cuda"></a>安装cuda</h2><p>版本选择12.6.0</p>
+<p><a target="_blank" rel="noopener" href="https://developer.nvidia.com/cuda-toolkit-archive/">CUDA Toolkit Archive | NVIDIA Developer</a></p>
+<p>cuda默认安装位置：</p>
+<p>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.6</p>
+<h2 id="安装cudnn"><a href="#安装cudnn" class="headerlink" title="安装cudnn"></a>安装cudnn</h2><p>版本选择8.9.7</p>
+<p><a target="_blank" rel="noopener" href="https://developer.nvidia.com/rdp/cudnn-archive">cuDNN Archive | NVIDIA Developer</a></p>
+<p>（2）CUDNN的安装与配置<br>1.下载好CUDNN的压缩包后进行解压</p>
+<p>2.打开\NVIDIA Computing Toolkit\CUDA\v12.2，将CUDNN对应bin、lib、include三个文件与CUDA对应的bin、lib、include进行合并，将CUDNN内文件全部复制到CUDA对应文件夹内</p>
+<p>将CUDNN\lib\x64的文件全部复制到CUDA\v12.2\lib\x64中</p>
+<p>3.打开“编辑系统环境变量”，点击“环境变量”，点击“系统变量”中Path添加C:\Program Files\NVIDIA Computing Toolkit\CUDA\v12.2\lib和v12.2\libnvvp以及v12.2\include，点击“确定”完成配置</p>
+<p>（3）检查CUDNN是否安装成功<br>打开C:\Program Files\NVIDIA Computing Toolkit\CUDA\v12.2\extras\demo_suite，查看是否有文件bandwidthTest.exe以及deviceQuery.exe，若存在则在该文件中打开cmd运行两.exe文件</p>
+<p>运行bandwidthTest.exe</p>
+<p>运行deviceQuery.exe</p>
+<p>若都能成功运行，CUDNN安装成功</p>
+<h2 id="克隆仓库"><a href="#克隆仓库" class="headerlink" title="克隆仓库"></a>克隆仓库</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/Wan-Video/Wan2.1.git</span><br><span class="line"><span class="built_in">cd</span> Wan2.1</span><br></pre></td></tr></table></figure>
+<h2 id="创建虚拟环境"><a href="#创建虚拟环境" class="headerlink" title="创建虚拟环境"></a>创建虚拟环境</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">conda create --name wanxiang python=3.10</span><br><span class="line"><span class="comment">#查看虚拟环境列表</span></span><br><span class="line">conda <span class="built_in">env</span> list</span><br><span class="line"><span class="comment">#进入虚拟环境</span></span><br><span class="line">conda activate wanxiang</span><br><span class="line"><span class="comment">#退出环境</span></span><br><span class="line">conda deactivate</span><br><span class="line"><span class="comment">#删除环境</span></span><br><span class="line">conda remove --name wanxiang --all</span><br><span class="line"><span class="comment">#查看当前环境的所有依赖</span></span><br><span class="line">conda list</span><br></pre></td></tr></table></figure>
+<h2 id="手动下载flash-attn"><a href="#手动下载flash-attn" class="headerlink" title="手动下载flash_attn"></a>手动下载flash_attn</h2><p>地址：<a target="_blank" rel="noopener" href="https://github.com/kingbri1/flash-attention/releases">https://github.com/kingbri1/flash-attention/releases</a></p>
+<p>安装：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install C:\Users\mx\Downloads\flash_attn-2.7.4.post1+cu124torch2.6.0cxx11abiFALSE-cp310-cp310-win_amd64.whl</span><br></pre></td></tr></table></figure>
+<p>查看当前虚拟环境的依赖</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">(wanxiang) C:\Users\mx&gt;conda list</span><br><span class="line"><span class="comment"># packages in environment at C:\Users\mx\anaconda3\envs\wanxiang:</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Name                    Version                   Build  Channel</span></span><br><span class="line">bzip2                     1.0.8                h2bbff1b_6</span><br><span class="line">ca-certificates           2025.2.25            haa95532_0</span><br><span class="line">einops                    0.8.1                    pypi_0    pypi</span><br><span class="line">filelock                  3.18.0                   pypi_0    pypi</span><br><span class="line">flash-attn                2.7.4.post1              pypi_0    pypi</span><br><span class="line">fsspec                    2025.3.0                 pypi_0    pypi</span><br><span class="line">jinja2                    3.1.6                    pypi_0    pypi</span><br><span class="line">libffi                    3.4.4                hd77b12b_1</span><br><span class="line">markupsafe                3.0.2                    pypi_0    pypi</span><br><span class="line">mpmath                    1.3.0                    pypi_0    pypi</span><br><span class="line">networkx                  3.4.2                    pypi_0    pypi</span><br><span class="line">openssl                   3.0.16               h3f729d1_0</span><br><span class="line">pip                       25.0            py310haa95532_0</span><br><span class="line">python                    3.10.16              h4607a30_1</span><br><span class="line">setuptools                75.8.0          py310haa95532_0</span><br><span class="line">sqlite                    3.45.3               h2bbff1b_0</span><br><span class="line">sympy                     1.13.1                   pypi_0    pypi</span><br><span class="line">tk                        8.6.14               h0416ee5_0</span><br><span class="line">torch                     2.6.0                    pypi_0    pypi</span><br><span class="line">typing-extensions         4.12.2                   pypi_0    pypi</span><br><span class="line">tzdata                    2025a                h04d1e81_0</span><br><span class="line">vc                        14.42                haa95532_4</span><br><span class="line">vs2015_runtime            14.42.34433          he0abc0d_4</span><br><span class="line">wheel                     0.45.1          py310haa95532_0</span><br><span class="line">xz                        5.6.4                h4754444_1</span><br><span class="line">zlib                      1.2.13               h8cc25b3_1</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="手动下载pytorch"><a href="#手动下载pytorch" class="headerlink" title="手动下载pytorch"></a>手动下载pytorch</h2><p>官网：<a target="_blank" rel="noopener" href="https://download.pytorch.org/whl/torch/">download.pytorch.org/whl/torch/</a></p>
+<p>torch安装踩坑：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/18188000858">使用国内镜像解决torch-cuda太慢问题 - 知乎 (zhihu.com)</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/dangranshizhe/article/details/143920339">记一次torch和torchvision安装历程_镜像安装 mkl-2021.4.0-CSDN博客</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/YY007H/article/details/141962724">pytorch gpu国内镜像下载，目前最快下载_pytorch镜像下载-CSDN博客</a></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">pip install torch torchvision --index-url https://mirrors.aliyun.com/pypi/simple</span><br><span class="line">pip install torch torchvision --index-url https://download.pytorch.org/whl/cu126</span><br><span class="line"></span><br><span class="line">pip install torch==2.1.1+cu121 --use-deprecated=legacy-resolver  --no-cache-dir -f https:/</span><br><span class="line">/mirrors.aliyun.com/pytorch-wheels/cu121</span><br><span class="line"></span><br><span class="line">pip install torch-2.3.1+cu121-cp310-cp310-win_amd64.whl</span><br><span class="line">pip install torchvision-0.18.1+cu121-cp310-cp310-win_amd64.whl</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>使用的版本：torch2.6</p>
+<p>版本对应关系：<a target="_blank" rel="noopener" href="https://blog.csdn.net/shiwanghualuo/article/details/122860521">PyTorch中torch、torchvision、torchaudio、torchtext版本对应关系_torch2.0.1对应的torchvision-CSDN博客</a></p>
+<p>手动下载链接：</p>
+<p><a target="_blank" rel="noopener" href="https://download.pytorch.org/whl/cu124/torch-2.6.0%2Bcu124-cp310-cp310-win_amd64.whl#sha256=7cc45c5b39d74875cfafe908b7f55c544147cc16b01e795feb2fe766583efe78">https://download.pytorch.org/whl/cu124/torch-2.6.0%2Bcu124-cp310-cp310-win_amd64.whl#sha256=7cc45c5b39d74875cfafe908b7f55c544147cc16b01e795feb2fe766583efe78</a></p>
+<p>检查是否成功</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"></span><br><span class="line"><span class="comment"># 检查 PyTorch 版本</span></span><br><span class="line"><span class="built_in">print</span>(torch.__version__)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 检查 CUDA 是否可用</span></span><br><span class="line"><span class="built_in">print</span>(torch.cuda.is_available())</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看当前 GPU 设备</span></span><br><span class="line"><span class="built_in">print</span>(torch.cuda.current_device())</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看 GPU 名称</span></span><br><span class="line"><span class="built_in">print</span>(torch.cuda.get_device_name(<span class="number">0</span>))</span><br></pre></td></tr></table></figure>
+<p><img src="C:\Users\mx\AppData\Roaming\Typora\typora-user-images\image-20250322211014441.png" alt="image-20250322211014441"></p>
+<h2 id="下载项目依赖"><a href="#下载项目依赖" class="headerlink" title="下载项目依赖"></a>下载项目依赖</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install -r requirements.txt</span><br></pre></td></tr></table></figure>
+<h2 id="安装魔搭"><a href="#安装魔搭" class="headerlink" title="安装魔搭"></a>安装魔搭</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install modelscope</span><br></pre></td></tr></table></figure>
+<h2 id="安装模型"><a href="#安装模型" class="headerlink" title="安装模型"></a>安装模型</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">modelscope download Wan-AI/Wan2.1-T2V-1.3B --local_dir ./Wan2.1-T2V-1.3B</span><br></pre></td></tr></table></figure>
+<h2 id="生成视频"><a href="#生成视频" class="headerlink" title="生成视频"></a>生成视频</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">python generate.py  --task t2v-1.3B --size 640x360 --ckpt_dir ./Wan2.1-T2V-1.3B --offload_model True --t5_cpu --sample_shift 6 --sample_guide_scale 7 --prompt <span class="string">&quot;Two anthropomorphic cats in comfy boxing gear and bright gloves fight intensely on a spotlighted stage.&quot;</span>  --save_file test.mp4</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="阿里提示词指南"><a href="#阿里提示词指南" class="headerlink" title="阿里提示词指南"></a>阿里提示词指南</h2><p><a target="_blank" rel="noopener" href="https://alidocs.dingtalk.com/i/nodes/jb9Y4gmKWrx9eo4dCql9LlbYJGXn6lpz?spm=5176.29623064.0.0.41ed1eceESoez3&amp;utm_scene=person_space">通义万相AI生视频—使用指南 · 钉钉文档 (dingtalk.com)</a></p>
+<p>提示词公式<br>提示词用来描述视频中所包含的内容和运动过程，它是控制视频画面内容与效果的关键因素。提示词描述越完整、精确和丰富，生成视<br>频的品质越高，且越贴近期望生成的内容。为了帮助你更快上手，我们针对不同的使用需求提供了四种提示词使用公式：<br>基础公式适用于初次尝试AI视频的新用户，及将AI视频作为灵感启发的用户，简单自由的提示词可生成更具有想象力的视频。<br>提示词＝主体+场景 +运动<br>主体：主体是视频内容的主要表现对象，可以是人、动物、植物、物品或非物理真实存在的想象物体。<br>场景：场景是主体所处的环境，包含背景、前景，可以是物理存在的真实空间或想象出来的虚构场景。<br>运动：运动包含主体的具体运动和非主体的运动状态，可以是静止、小幅度运动、大幅度运动、局部运动或整体动势。<br>进阶公式适用于有一定AI视频使用经验的用户，在基础公式之上添加更丰富细致的描述可有效提升视频质感、生动性与故事性。<br>提示词＝主体（主体描述）+场景（场景描述）+运动（运动描述）+镜头语言+氛围词+风格化<br>主体描述：主体描述是对主体外观特征细节的描述，可通过形容词或短句列举，例如“一位身着少数民族服饰的黑发苗族少女”、“一位来自异世界的飞天仙<br>子，身着破日却华丽的服饰，背后展开一对由废墟碎片构成的奇异翅膀”。<br>场景描述：场景描述是对主体所处环境特征细节的描述，可通过形容词或短句列举。<br>运动描述：运动描述是对运动特征细节的描述，包含运动的幅度、速率和运动作用的效果，例如“猛烈地摇摆”、“缓慢地移动”、“打碎了玻璃”。<br>镜头语言：镜头语言包含景别、视角、镜头、运镜等，常见镜头语言详见下方提示词词典。<br>氛围词：氛围词是对预期画面氛围的描述，例如“梦幻”、“孤独”、“宏伟”，常见氛围词详见下方提示词词典。<br>风格化：风格化是对画面风格语言的描述，例如“赛博朋克”、“勾线插画”、“废土风格”，常见风格化详见下方提示词词典。</p>
+<p>运镜公式适用于对镜头运动有明确要求、面对专业视频输出场景的用户，在基础公式/丰富公式之上添加更具体的运镜描述可以有效提<br>升视频的动态感和叙事性。<br>提示词=运镜描述+主体（主体描述）+场景（场景描述）+运动（运动描述）+镜头语言+氛围词+风格化<br>运镜描述：运镜描述是对镜头运动的具体描述，在时间线上，将镜头运动和画面内容的变化有效结合可以有效提升视频叙事的丰富性和专业度。用户可以通<br>过代入导演的视角来想象和书写运镜过程。时间上，需要注意将镜头运动的时长合理控制在5s内，避免过于复杂的运镜。</p>
+<p>形变公式适用于有明确该类创意需求的用户，在基础公式/进阶公式的基础上添加形变描述可以有效提升视频的趣味性，带来意想不到<br>的视觉效果。<br>提示词＝主体A（主体描述）+形变过程+主体B（主体描述）+场景（场景描述）+运动（运动描述）+镜头语言+氛围词+<br>风格化<br>主体A：主体A指主体形变前的特征和状态。<br>形变过程：形变过程是对主体从A形态变为B形态的过程描述。详细的过程描述可以有效提升形变的自然度和生动性。<br>主体B：主体B指主体形变后的特征和状态。</p>
+<p>提示词示例<br>日漫风格。在城市的街道一角，一只黑猫蹲伏在路灯下，注视着远处的霓<br>虹灯光。突然一道蓝色光芒从天而降，迅速包裹住他的身体。黑猫在光芒<br>中腾空而起，黑色的毛发逐渐消散在空气中，身体迅速变长。他的皮毛变<br>为一件黑色的修身西服，勾勒出修长的轮廓。猫耳消失，脸部轮廓逐渐清<br>晰，最终化为一张帅气而冷峻的少年面孔。他轻巧地落在地上，西服在夜<br>风中微微飘动，蓝光渐渐褪去，宛如一位从未来世界中走出的神秘少年，<br>优雅而自信。</p>
+<p>通过撰写不同维度的提示词，能够提升生成视频在指定维度的可控性与表现力。我们精心准备了常用维度及提示词示例作为参考，同时<br>也欢迎大家挖掘更多使用妙招。</p>
+<p>特写镜头|视频中，镜头特写一位古风女子的脸庞，柔和的光线<br>洒在她的皮肤上，勾勒出细腻的轮廓。</p>
+<p>近景镜头|视频中，镜头近景显示一位古风女子捧着一把青色折<br>扇，指尖轻轻划过扇面上的精美花纹，仿佛在细细品味其中的韵<br>味。</p>
+<p>中景镜头|视频中，镜头中景展示一位古风女子袅袅婷婷地走在<br>花从中，长裙随风飘荡，仿佛在与自然交融。</p>
+<p>远景镜头|视频中，镜头远景展示了繁华的城市街道，宽阔的人<br>行道上人来人往，形成了一个生动而热闹的画面。</p>
+<p>鸟瞰镜头丨视频中，镜头采用鸟瞰视角，俯瞰整个城市的全貌，<br>展现出互相交织的街道与建筑。</p>
+<p>视频从一双行走的腿开始，镜头采用低角度拍摄，聚焦于脚步的<br>移动。画面中，鞋子踩踏在粗糙的废弃地面上，周围是破碎的混<br>凝土和零散的杂草，展现出废土风格的荒凉与颓废。</p>
+<p>视频展示了一个在末世中行走的人的场景，镜头从高处俯拍一个<br>人在废土风格的场景中随着阳光缓缓前行。</p>
+<p>视频中展示了一块巨大的立方体石块，伫立在广场中央，周围宁<br>静。镜头缓缓推进，逐渐靠近石块，粗犷的纹理和岁月的痕迹逐<br>渐清晰。</p>
+<p>视频中展示了一块巨大的立方体石块，稳稳伫立在广场中央。镜<br>头缓缓拉远，石块的宏伟轮廓逐渐显现，广场的石砖和周围的草<br>坪逐渐展露。最终，整个广场的景色展现在眼前。</p>
+<p>视频中展示了一块立方体石块，镜头聚焦在立方体石块上，阳光<br>透过，散发出温暖的光泽。随着镜头轻轻移动，石块的细节在视<br>野中渐渐变化，周围环境模糊成背景。随即，镜头自然地切换到<br>旁边的立方体铁块，光滑的金属表面在阳光下闪烁。焦点流畅地<br>转移，铁块的冷列与石块的厚重形成鲜明对比。镜头在两者之间<br>游走，展现出各自的独特魅力。</p>
+<p>视频中展示了一个立方体石块在广场中央滚动，镜头跟随运动。<br>随着砾石的移动，周围的绿草如茵。镜头灵活地紧贴着砾石，捕<br>捉到地面上细微的纹路和春风掠过的动感。</p>
+<p>视频中展示了一块巨大的立方体石块，伫立在广场中央。镜头旋<br>转延展，围绕这块石块延伸，捕捉到表面粗犷的纹理和阳光下闪<br>烁的细微光泽。</p>
+<p>以上是文生视频的提示词指南，按照以上的提示词指南优化这句话（我需要偏写实，偏真实的画风，似乎是真实的画面）：</p>
+<h2 id="Gradio-空间可视化"><a href="#Gradio-空间可视化" class="headerlink" title="Gradio 空间可视化"></a>Gradio 空间可视化</h2></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://maxmaxiang.github.io">马翔</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://maxmaxiang.github.io/2025/03/31/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2%E9%98%BF%E9%87%8C%E7%9A%84%E4%B8%87%E8%B1%A12.1%E6%96%87%E7%94%9F%E8%A7%86%E9%A2%91%EF%BC%88Wan2.1-T2V-1.3B%EF%BC%89%E6%A8%A1%E5%9E%8B(1)/">https://maxmaxiang.github.io/2025/03/31/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2%E9%98%BF%E9%87%8C%E7%9A%84%E4%B8%87%E8%B1%A12.1%E6%96%87%E7%94%9F%E8%A7%86%E9%A2%91%EF%BC%88Wan2.1-T2V-1.3B%EF%BC%89%E6%A8%A1%E5%9E%8B(1)/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://maxmaxiang.github.io" target="_blank">马翔的博客</a>！</span></div></div><div class="tag_share"><div class="post-share"><div class="social-share" data-image="/img/butterfly-icon.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2025/03/31/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2deepseek/" title=""><div class="cover" style="background: var(--default-bg-color)"></div><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2"></div></div><div class="info-2"><div class="info-item-1">本地部署deepseek参考文档：DeepSeek R1本地部署+知识库+联网搜索，终极版方案 - 知乎 运行deepseek1ollama run deepseek-r1:8b 以下是 Ollama 的常用命令及其功能的详细列表： 1. 服务管理 启动 Ollama 服务： 1ollama serve 用于启动 Ollama 服务，以便运行模型和处理请求。  停止 Ollama 服务： 1ollama stop 停止正在运行的 Ollama 服务。  重启 Ollama 服务： 1ollama restart 重启 Ollama 服务。   2. 模型管理 拉取模型： 1ollama pull &lt;model-name&gt; 从模型库中下载模型。  运行模型： 1ollama run &lt;model-name&gt; 运行已下载的模型。  列出本地模型： 12ollama listollama ls 查看已下载的模型列表。  删除模型： 1ollama rm &lt;model-name&gt; 删除本地模型。  复制模型： 1ollama cp...</div></div></div></a><a class="pagination-related" href="/2099/02/03/%E5%90%8D%E4%BA%BA%E5%90%8D%E8%A8%80/%E5%90%8D%E4%BA%BA%E5%90%8D%E8%A8%80/" title="名人名言"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">名人名言</div></div><div class="info-2"><div class="info-item-1">...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">马翔</div><div class="author-info-description">命运和性格是同一个概念的两个名字。</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">54</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2%E9%98%BF%E9%87%8C%E7%9A%84%E4%B8%87%E8%B1%A12-1%E6%96%87%E7%94%9F%E8%A7%86%E9%A2%91%EF%BC%88Wan2-1-T2V-1-3B%EF%BC%89%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.</span> <span class="toc-text">本地部署阿里的万象2.1文生视频（Wan2.1-T2V-1.3B）模型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8D%A2%E6%BA%90"><span class="toc-number">1.1.</span> <span class="toc-text">换源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85cuda"><span class="toc-number">1.2.</span> <span class="toc-text">安装cuda</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85cudnn"><span class="toc-number">1.3.</span> <span class="toc-text">安装cudnn</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%8B%E9%9A%86%E4%BB%93%E5%BA%93"><span class="toc-number">1.4.</span> <span class="toc-text">克隆仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83"><span class="toc-number">1.5.</span> <span class="toc-text">创建虚拟环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%8B%E5%8A%A8%E4%B8%8B%E8%BD%BDflash-attn"><span class="toc-number">1.6.</span> <span class="toc-text">手动下载flash_attn</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%8B%E5%8A%A8%E4%B8%8B%E8%BD%BDpytorch"><span class="toc-number">1.7.</span> <span class="toc-text">手动下载pytorch</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD%E9%A1%B9%E7%9B%AE%E4%BE%9D%E8%B5%96"><span class="toc-number">1.8.</span> <span class="toc-text">下载项目依赖</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E9%AD%94%E6%90%AD"><span class="toc-number">1.9.</span> <span class="toc-text">安装魔搭</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.10.</span> <span class="toc-text">安装模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%9F%E6%88%90%E8%A7%86%E9%A2%91"><span class="toc-number">1.11.</span> <span class="toc-text">生成视频</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%98%BF%E9%87%8C%E6%8F%90%E7%A4%BA%E8%AF%8D%E6%8C%87%E5%8D%97"><span class="toc-number">1.12.</span> <span class="toc-text">阿里提示词指南</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Gradio-%E7%A9%BA%E9%97%B4%E5%8F%AF%E8%A7%86%E5%8C%96"><span class="toc-number">1.13.</span> <span class="toc-text">Gradio 空间可视化</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2099/02/03/%E5%90%8D%E4%BA%BA%E5%90%8D%E8%A8%80/%E5%90%8D%E4%BA%BA%E5%90%8D%E8%A8%80/" title="名人名言">名人名言</a><time datetime="2099-02-03T14:44:24.000Z" title="发表于 2099-02-03 22:44:24">2099-02-03</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/03/31/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2%E9%98%BF%E9%87%8C%E7%9A%84%E4%B8%87%E8%B1%A12.1%E6%96%87%E7%94%9F%E8%A7%86%E9%A2%91%EF%BC%88Wan2.1-T2V-1.3B%EF%BC%89%E6%A8%A1%E5%9E%8B(1)/" title="无标题">无标题</a><time datetime="2025-03-31T05:42:50.466Z" title="发表于 2025-03-31 13:42:50">2025-03-31</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/03/31/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2deepseek/" title="无标题">无标题</a><time datetime="2025-03-31T05:42:50.452Z" title="发表于 2025-03-31 13:42:50">2025-03-31</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/03/31/%E6%B8%B8%E6%88%8F/%E6%96%87%E6%98%8E6/%E6%96%B0%E5%BB%BA%20Markdown/" title="无标题">无标题</a><time datetime="2025-03-31T05:42:50.406Z" title="发表于 2025-03-31 13:42:50">2025-03-31</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/01/14/%E8%AF%BB%E5%90%8E%E6%84%9F/%E5%86%B3%E7%AD%96%E7%9A%84%E8%89%BA%E6%9C%AF/" title="决策的艺术">决策的艺术</a><time datetime="2025-01-14T15:01:17.000Z" title="发表于 2025-01-14 23:01:17">2025-01-14</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;2025 By 马翔</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.4.0-b1</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

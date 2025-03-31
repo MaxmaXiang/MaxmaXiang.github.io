@@ -1,0 +1,237 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>马翔的博客</title><meta name="author" content="马翔"><meta name="copyright" content="马翔"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="命运和性格是同一个概念的两个名字。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="马翔的博客">
+<meta property="og:url" content="https://maxmaxiang.github.io/page/2/index.html">
+<meta property="og:site_name" content="马翔的博客">
+<meta property="og:description" content="命运和性格是同一个概念的两个名字。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://maxmaxiang.github.io/img/butterfly-icon.png">
+<meta property="article:author" content="马翔">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://maxmaxiang.github.io/img/butterfly-icon.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://maxmaxiang.github.io/page/2/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '马翔的博客',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="马翔的博客" type="application/atom+xml">
+</head><body><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">马翔的博客</span></a></span><div id="menus"></div></nav><div id="site-info"><h1 id="site-title">马翔的博客</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/09/26/%E8%AF%BB%E5%90%8E%E6%84%9F/%E8%87%AA%E5%8D%91%E4%B8%8E%E8%B6%85%E8%B6%8A/" title="自卑与超越">自卑与超越</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-09-26T03:01:17.000Z" title="发表于 2024-09-26 11:01:17">2024-09-26</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%AF%BB%E5%90%8E%E6%84%9F/">读后感</a></span></div><div class="content">​        1 不管是自卑还是其他心理问题，都是因为眼界太窄心太小，过于沉溺在自己的情绪里。转移注意力，努力工作赚钱，培养兴趣爱好，建立深度关系，融入社会，勇敢的解决问题，能治一切心理病。（如果陷的比较深，能找个人时常鼓励你，关键时候推你一把，就更好了） ​        2 不开心是你的大脑中病毒了（不合理的固化思维），不是你人有问题，检测一下（情绪自察），清清病毒就好了（自我暗示，俗称阿q精神）。 ​        3 别矫情，只要你能正常工作，生活能自理，就没啥大问题，努力提升自己不比瞎想强？ 1 有心理问题，是因为没学会与人合作、没勇气解决问题。 人生就是与人合作，解决问题的过程。 人生意义在于与人合作、解决问题，失败者的共同点是欠缺合作能力。 治疗心理问题，要培养与人合作的勇气。（1.3,1.6，2.3） 人类的所有问题都能分成三类：职业、交际和两性。（1.2） 2 决定人生的不是过去，是我们对过去的看法。 对人生起决定作用的不是生活经验，是我们赋予经验的认知和意义。 个体心理学摒弃了决定论，认为童年不能决定人生。...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/09/26/%E8%AF%BB%E5%90%8E%E6%84%9F/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%8E%E4%BA%BA%E8%84%91/" title="自卑与超越">自卑与超越</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-09-26T03:01:17.000Z" title="发表于 2024-09-26 11:01:17">2024-09-26</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%AF%BB%E5%90%8E%E6%84%9F/">读后感</a></span></div><div class="content">​        1 不管是自卑还是其他心理问题，都是因为眼界太窄心太小，过于沉溺在自己的情绪里。转移注意力，努力工作赚钱，培养兴趣爱好，建立深度关系，融入社会，勇敢的解决问题，能治一切心理病。（如果陷的比较深，能找个人时常鼓励你，关键时候推你一把，就更好了） ​        2 不开心是你的大脑中病毒了（不合理的固化思维），不是你人有问题，检测一下（情绪自察），清清病毒就好了（自我暗示，俗称阿q精神）。 ​        3 别矫情，只要你能正常工作，生活能自理，就没啥大问题，努力提升自己不比瞎想强？ 1 有心理问题，是因为没学会与人合作、没勇气解决问题。 人生就是与人合作，解决问题的过程。 人生意义在于与人合作、解决问题，失败者的共同点是欠缺合作能力。 治疗心理问题，要培养与人合作的勇气。（1.3,1.6，2.3） 人类的所有问题都能分成三类：职业、交际和两性。（1.2） 2 决定人生的不是过去，是我们对过去的看法。 对人生起决定作用的不是生活经验，是我们赋予经验的认知和意义。 个体心理学摒弃了决定论，认为童年不能决定人生。...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/09/25/%E8%AF%BB%E5%90%8E%E6%84%9F/%E4%B8%80%E5%9D%97%E7%89%9B%E6%8E%92/" title="一块牛排">一块牛排</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-09-25T03:01:17.000Z" title="发表于 2024-09-25 11:01:17">2024-09-25</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%AF%BB%E5%90%8E%E6%84%9F/">读后感</a></span></div><div class="content">​        当他坐在他的角落里，朝他对手看去的时候，他想到了一个念头，这就是，如果把他的智慧和桑德尔的青春加在一起的话，就可构成一个世界重量级冠军了。可是问题在这里，桑德尔决不会成为世界冠军。他缺少智慧，他得到智慧的惟一方法是以青春来换取；而当他有了智慧时，青春也就消耗尽了。 ​        年少轻狂是由生命力决定的，有些事情，真的要（感到）老了以后，才能体会其中的无奈。人生如果先老，再年轻，可能很不一样。人生的糖果发放的总是那么早，早的人们不懂珍惜。 ​       ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/09/24/%E8%AF%BB%E5%90%8E%E6%84%9F/%E7%A1%85%E8%B0%B7%E4%B9%8B%E7%81%AB/" title="硅谷之火">硅谷之火</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-09-24T02:01:17.000Z" title="发表于 2024-09-24 10:01:17">2024-09-24</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%AF%BB%E5%90%8E%E6%84%9F/">读后感</a></span></div><div class="content">​        土质计算机俱乐部的人们想把计算机变成像电子学和一样流行的东西。直到现在，电子学也不算流行吧，起码在中国。 ​        沃兹制作机器，马尔库拉有商业思想，斯科蒂管理商店，可是留有胡志明式胡须的莽撞小伙子却是推动力。创业需要的领域知识极多，必须要不同领域的人合作才行，且需要有一个执行力强的人做”坏人”。 ​        许多计算机极客动不动就是连续2周，连续1个月每天工作10几个小时，工作到凌晨2点，12点起直接吃午饭再工作一天。 这本书中极多的人并没有遵循通常的发展轨迹来规划学业和职业，好像按正常路线走的人才是少数。可能比尔盖茨除外，他的关系太硬了，这么晚入场还是统治了市场。 还有这群人虽然和真正的大公司无法相比，但他们也基本人均家里有自家车库，有独院，可以在车库组装各种电子器械，很多人拥有喜欢捣鼓电子元件的父亲。 </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/09/19/%E8%AF%BB%E5%90%8E%E6%84%9F/%E5%9C%A8%E7%BB%86%E9%9B%A8%E4%B8%AD%E5%91%BC%E5%96%8A/" title="在细雨中呼喊">在细雨中呼喊</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-09-19T07:06:17.000Z" title="发表于 2024-09-19 15:06:17">2024-09-19</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%AF%BB%E5%90%8E%E6%84%9F/">读后感</a></span></div><div class="content">前几天一直很焦躁。究其原因，虽难以言清，也未必愿意言于出口，倒也不是不能分析出来。大概与人类似，也是出于成长的寂寞和对未来的迷惘，其中也参杂一些以前便不愿想的无答案的话题，譬如孤独本质，生之意义之类。         余华的作品以前看过他的活着和许三观卖血记，其中情节差不多都忘掉了，但他对生活和苦难下人物貌似轻描淡写的白描很是入木三分，让观者代入其中，恍如自己的记忆。低劣和不凡的人性通过他异常简单和冷静的带有回忆性质的淡然的笔触写出来，直指内心。《在细雨中呼喊》亦是如此，余华在这本带自传性质的书里（我说的自传性质只指主人公的心理成长历程，个人强烈的感觉其中有余华的影子）通过描述“我”在各种畸形压抑下的成长历程来颠覆了，或者残酷点明了人类之间薄若蝉翼的关系，其中既包括朋友，兄弟，和父母，也涵括亲情友情和爱情。    首先，但在生存和苦难面前，这些虚饰的情感变得不堪一击。首当其冲的是亲情在生存面前的破裂，主人公的祖父的遭遇自不必说，成了家里无用的累赘，其弟死后也只是成为一家人改变命运的筹码。就连主人公自身，也得出了继父比他生父更像父亲的结论。   ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/09/19/%E8%AF%BB%E5%90%8E%E6%84%9F/%E5%8F%B2%E8%92%82%E5%A4%AB.%E4%B9%94%E5%B8%83%E6%96%AF%E4%BC%A0/" title="史蒂夫.乔布斯传">史蒂夫.乔布斯传</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-09-19T06:01:17.000Z" title="发表于 2024-09-19 14:01:17">2024-09-19</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%AF%BB%E5%90%8E%E6%84%9F/">读后感</a></span></div><div class="content">苦行和极简将会让人更加敏锐。 1.不空等 乔布斯年轻时，他要是想要某样工具来造点什么东西的时候，他会直接去找源头要。 他回忆起在12岁的时候，他想要造一个计频器，于是直接在电话簿里找到了HP的创始人Bill Hewlett，找他要了那些零件。 2.打造自己的现实 乔布斯很早就懂得，要是不喜欢生活中或世界里的某样东西，就改变它们，要么通过行动，要么通过纯粹的意志力量。 Hoffman后来叹道，“现实扭曲力场有鞭策的作用，但接着现实会反击。”——Joanna...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/09/18/%E8%AF%BB%E5%90%8E%E6%84%9F/%E5%BF%83%E6%B5%81/" title="心流">心流</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-09-18T03:01:17.000Z" title="发表于 2024-09-18 11:01:17">2024-09-18</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%AF%BB%E5%90%8E%E6%84%9F/">读后感</a></span></div><div class="content">​        从社会制约下解放自我，最重要的步骤就是时时刻刻发掘每一事件中的回馈。如果我们学会在不断向前推进的体验中找到快乐与意义，社会制约的重担就会从肩上自动滑落。 越来越完美的自我控制，产生一种痛快的感觉。你不断逼身体发挥所有的极限，直到全身隐隐作痛；然后你会满怀敬畏地回顾自我，回顾你所做的一切，那种佩服的感觉简直无法形容。它带给你一种狂喜，一种自我满足。只要在这种战役中战胜过自己，人生其他战场的挑战，也就变得容易多了。 ——这点感触颇深。开始的一部是很费力气的，学习某个新知识或者技能的过程。从一点点懵懂开始，到达一定了解发现其实自己似乎绕了一个大圈子，不过这些都无所谓，如果保留好努力的时间记录，就能感动一种狂喜。就像迈台阶那样，到达一层感到一种极大的满足感和成就感。这大概是物质所不能给予的。而且在此之后，会对自己充满自信，再次尝试新事物的时候也不再恐惧。 享乐无须耗费精神能量，但乐趣必须运用高度的注意力。换言之，享乐可以不花力气，只要大脑特定中枢受到电击或药物的刺激，就能产生享受的快感；但是打网球、看书、谈话，若不全神贯注，就会觉得索然无味，毫无乐趣可言。 ​    ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/09/18/%E8%AF%BB%E5%90%8E%E6%84%9F/%E5%86%AF%E8%AF%BA%E4%BC%8A%E6%9B%BC%E4%BC%A0%E8%AE%B0/" title="冯诺依曼传">冯诺依曼传</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-09-18T02:01:17.000Z" title="发表于 2024-09-18 10:01:17">2024-09-18</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%AF%BB%E5%90%8E%E6%84%9F/">读后感</a></span></div><div class="content">​        从中发现一个细节：冯诺依曼对冯诺依曼架构的灵感来源最初来源于蒸汽时代的纺织机。当时的一种改进型的纺织机能够保存要纺织的图案的模板，要织哪个图案，就用对应的模板，这是最初计算和存储分离的雏形。原来伟大的技术最开始可能来源于并不起眼的东西，只有博览群书，才能有不知从哪冒出来的灵感。马斯克，巴菲特，查理芒格都是被称为“书虫”的人。 ​       ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/09/18/%E8%AF%BB%E5%90%8E%E6%84%9F/%E9%A9%AC%E6%96%AF%E5%85%8B%E4%BC%A0/" title="马斯克传">马斯克传</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-09-18T01:01:17.000Z" title="发表于 2024-09-18 09:01:17">2024-09-18</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%AF%BB%E5%90%8E%E6%84%9F/">读后感</a></span></div><div class="content">这段描述马斯克小时候的场景： ​        智力发育迟缓。”他的一位老师解释说，他在大部分时间都处于恍饱状态听不进去别人说的话。“他一直看着窗外，我说你要注意听讲，他说:“叶现在变成棕色的子。”埃罗尔说埃隆说得对，树叶就是变棕色了。​        当父母同意对埃隆进行听力测试时，僵局终于被打破了—好像这就是问题的症结所在。埃隆说:”他们认为是我耳朵的问题，所以把我的腺样体拿掉了。”学校的负责人不再纠缠于他的注意力问题，但这没有改变他在思考问题时置身事外、无视外界信息的倾向。“从小时候开始，如果我要思考一些困难的问题，那么我所有的感官系统都会关闭。”埃隆说,“我看不到，也听不到任何东西。我在用大脑进行计算，而不是接收外界的信息。”班上其他孩子会跳起来，在他面前挥舞手臂，看看他能不能注意到他们，结果没有。梅耶说:“当他眼神放空时，最好不要试图干扰他。”​       ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/09/14/%E8%AF%BB%E5%90%8E%E6%84%9F/%E8%A5%BF%E8%A1%8C%E6%BC%AB%E8%AE%B0/" title="西行漫记">西行漫记</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-09-13T17:01:17.000Z" title="发表于 2024-09-14 01:01:17">2024-09-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%AF%BB%E5%90%8E%E6%84%9F/">读后感</a></span></div><div class="content">1.在对未来未知的时候，能够相信自己宏观的判断并依此做事是非常难得的 2.不要因为尊敬父母，爱父母而去做父母让你去做的事，不去做父母不让你做的事；也不要因为讨厌父母，恨父母而去做父母不让你去做的事，不去做父母让你做的事；抛开自己主观的态度和情绪后思考，去做自己认为需要做的事，不去做自己认为不需要做的事。要有只有自己掌控自己的意识。 总结了太祖年轻时的活动：独立思考，大量阅读，强身健体，以才交友，大量交际，同时志怀天下，接触当时最新的思想，不以求田问舍为业，敢于实践，又会写作，会演讲，有组织能力。 </div></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/#content-inner">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/#content-inner">6</a><a class="extend next" rel="next" href="/page/3/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">马翔</div><div class="author-info-description">命运和性格是同一个概念的两个名字。</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">54</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2099/02/03/%E5%90%8D%E4%BA%BA%E5%90%8D%E8%A8%80/%E5%90%8D%E4%BA%BA%E5%90%8D%E8%A8%80/" title="名人名言">名人名言</a><time datetime="2099-02-03T14:44:24.000Z" title="发表于 2099-02-03 22:44:24">2099-02-03</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/03/31/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2%E9%98%BF%E9%87%8C%E7%9A%84%E4%B8%87%E8%B1%A12.1%E6%96%87%E7%94%9F%E8%A7%86%E9%A2%91%EF%BC%88Wan2.1-T2V-1.3B%EF%BC%89%E6%A8%A1%E5%9E%8B(1)/" title="无标题">无标题</a><time datetime="2025-03-31T05:42:50.466Z" title="发表于 2025-03-31 13:42:50">2025-03-31</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/03/31/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2deepseek/" title="无标题">无标题</a><time datetime="2025-03-31T05:42:50.452Z" title="发表于 2025-03-31 13:42:50">2025-03-31</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/03/31/%E6%B8%B8%E6%88%8F/%E6%96%87%E6%98%8E6/%E6%96%B0%E5%BB%BA%20Markdown/" title="无标题">无标题</a><time datetime="2025-03-31T05:42:50.406Z" title="发表于 2025-03-31 13:42:50">2025-03-31</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/01/14/%E8%AF%BB%E5%90%8E%E6%84%9F/%E5%86%B3%E7%AD%96%E7%9A%84%E8%89%BA%E6%9C%AF/" title="决策的艺术">决策的艺术</a><time datetime="2025-01-14T15:01:17.000Z" title="发表于 2025-01-14 23:01:17">2025-01-14</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%90%8D%E4%BA%BA%E5%90%8D%E8%A8%80/"><span class="card-category-list-name">名人名言</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%93%B2%E5%AD%A6/"><span class="card-category-list-name">哲学</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%95%B0%E5%AD%A6/"><span class="card-category-list-name">数学</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%B8%B8%E6%88%8F/"><span class="card-category-list-name">游戏</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/"><span class="card-category-list-name">计算机</span><span class="card-category-list-count">16</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E8%AF%BB%E5%90%8E%E6%84%9F/"><span class="card-category-list-name">读后感</span><span class="card-category-list-count">23</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E5%90%8D%E4%BA%BA%E5%90%8D%E8%A8%80/" style="font-size: 1.1em; color: #999">名人名言</a> <a href="/tags/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/" style="font-size: 1.3em; color: #99a1ac">高等代数</a> <a href="/tags/%E7%AC%9B%E5%8D%A1%E5%B0%94/" style="font-size: 1.1em; color: #999">笛卡尔</a> <a href="/tags/%E6%96%87%E6%98%8E6/" style="font-size: 1.5em; color: #99a9bf">文明6</a> <a href="/tags/hexo%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" style="font-size: 1.1em; color: #999">hexo使用教程</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      <a class="card-more-btn" href="/archives/"
+            title="查看更多">
+            <i class="fas fa-angle-right"></i>
+          </a>
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2099/02/">
+            <span class="card-archive-list-date">
+              二月 2099
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/03/">
+            <span class="card-archive-list-date">
+              三月 2025
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/01/">
+            <span class="card-archive-list-date">
+              一月 2025
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/11/">
+            <span class="card-archive-list-date">
+              十一月 2024
+            </span>
+            <span class="card-archive-list-count">4</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/10/">
+            <span class="card-archive-list-date">
+              十月 2024
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/09/">
+            <span class="card-archive-list-date">
+              九月 2024
+            </span>
+            <span class="card-archive-list-count">18</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/08/">
+            <span class="card-archive-list-date">
+              八月 2024
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/04/">
+            <span class="card-archive-list-date">
+              四月 2024
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">54</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-03-31T07:34:57.300Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;2025 By 马翔</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.4.0-b1</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
